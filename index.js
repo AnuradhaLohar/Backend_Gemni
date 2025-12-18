@@ -14,7 +14,8 @@ import cors from 'cors'
 const app = express()
 
 app.use(cors({
-  origin: "http://localhost:5173",
+  // origin: "http://localhost:5173",
+  origin: "https://frontend-gemini-eight.vercel.app",
   credentials : true
 }))
 
