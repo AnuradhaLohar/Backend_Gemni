@@ -13,11 +13,12 @@ import cors from 'cors'
 
 const app = express()
 
-app.use(cors({
-  // origin: "http://localhost:5173",
-  origin: "https://frontend-gemini-eight.vercel.app",
-  credentials : true
-}))
+app.use(cors())
+// app.use(cors({
+//   // origin: "http://localhost:5173",
+//   origin: "https://frontend-gemini-eight.vercel.app",
+//   credentials : true
+// }))
 
 app.use(express.json())
 app.use(bodyparser.json())
@@ -36,11 +37,11 @@ app.use('/api/v1/chat', chatRouter)
 //messages
 app.use('/api/v1/message', messagesRouter)
 
-export default app
+// export default app
 
-// const port = process.env.PORT;
-// app.listen(port, () => {
-//   console.log("Server started on port" + port)
-// })
+const port = process.env.PORT;
+app.listen(port, () => {
+  console.log("Server started on port" + port)
+})
 
 
