@@ -37,11 +37,11 @@ app.use('/api/v1/chat', chatRouter)
 //messages
 app.use('/api/v1/message', messagesRouter)
 
-export default app
+// export default app
 
-// const port = process.env.PORT;
-// app.listen(port, () => {
-//   console.log("Server started on port" + port)
-// })
+const port = process.env.PORT;
+app.listen(port, () => {
+  console.log("Server started on port" + port)
+})
 
 
